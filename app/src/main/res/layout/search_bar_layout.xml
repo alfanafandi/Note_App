@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?attr/colorSurface"
+    android:elevation="8dp"
+    android:padding="8dp"
+    android:gravity="center_vertical">
+
+    <!-- EditText pencarian -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_weight="1"
+        android:background="@drawable/search_edittext_bg"
+        android:hint="Cari kata..."
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:singleLine="true"
+        android:imeOptions="actionSearch"
+        android:textColor="?attr/colorOnSurface"
+        android:textColorHint="?attr/colorOnSurface" />
+
+    <!-- Tombol Previous -->
+    <ImageButton
+        android:id="@+id/btnPrev"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_upward"
+        android:background="@android:color/transparent"
+        android:contentDescription="Sebelumnya"
+        android:layout_marginStart="8dp"
+        app:tint="?attr/colorPrimary" />
+
+    <!-- Tombol Next -->
+    <ImageButton
+        android:id="@+id/btnNext"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_arrow_downward"
+        android:background="@android:color/transparent"
+        android:contentDescription="Berikutnya"
+        android:layout_marginStart="4dp"
+        app:tint="?attr/colorPrimary" />
+</LinearLayout>

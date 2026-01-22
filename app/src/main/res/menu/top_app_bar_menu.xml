@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- 🔍 Tombol Search -->
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_menu_search"
+        android:title="Cari"
+        app:showAsAction="ifRoom|collapseActionView"
+        app:actionViewClass="androidx.appcompat.widget.SearchView" />
+
+    <!-- 🔽 Tombol Urutkan -->
+    <item
+        android:id="@+id/action_sort"
+        android:title="Urutkan"
+        app:showAsAction="never" />
+
+    <!-- 📂 Kategori -->
+    <item
+        android:id="@+id/action_category"
+        android:title="Kategori"
+        app:showAsAction="never" />
+
+    <!-- 💾 Cadangkan -->
+    <item
+        android:id="@+id/action_backup"
+        android:title="Cadangkan"
+        app:showAsAction="never" />
+
+    <!-- 🗑️ Tempat Sampah -->
+    <item
+        android:id="@+id/action_trash"
+        android:title="Tempat Sampah"
+        app:showAsAction="never" />
+
+</menu>

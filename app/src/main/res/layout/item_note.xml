@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginVertical="6dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="5dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="#FAFAFA"
+    android:foreground="?attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Judul Catatan -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Judul Catatan"
+            android:textStyle="bold"
+            android:textSize="19sp"
+            android:textColor="#212121"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Isi Catatan -->
+        <TextView
+            android:id="@+id/tvContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Isi catatan singkat..."
+            android:textSize="15sp"
+            android:textColor="#616161"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:layout_marginTop="6dp" />
+
+        <!-- Garis Pemisah -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_marginVertical="8dp"
+            android:background="#EEEEEE" />
+
+        <!-- Tanggal Catatan -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Diperbarui: 10 Oktober 2025"
+            android:textSize="12sp"
+            android:textColor="#9E9E9E"
+            android:gravity="end" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

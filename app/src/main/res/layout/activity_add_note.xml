@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FAF5EF"
+    android:fitsSystemWindows="true"
+    tools:context=".AddNoteActivity">
+
+    <!-- 🔥🔥 HEADER YANG BENAR DIKEMBALIKAN DI SINI 🔥🔥 -->
+    <RelativeLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:padding="8dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            app:tint="#6D4C41"
+            android:contentDescription="Kembali" />
+
+        <ImageButton
+            android:id="@+id/btnCategory"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_menu_directions"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:layout_toStartOf="@+id/btnSave"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="8dp"
+            app:tint="#6D4C41"
+            android:contentDescription="Pilih Kategori" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Simpan"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:backgroundTint="#6D4C41"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
+    <!-- Konten Catatan (Dengan Tombol AI) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <EditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:hint="Judul Catatan"
+            android:inputType="textCapWords"
+            android:paddingBottom="12dp"
+            android:textColor="#3E2723"
+            android:textColorHint="#A1887F"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnFillWithAi"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✨ Isi dengan AI"
+            android:layout_gravity="start"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#6D4C41"
+            app:strokeColor="#6D4C41"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <EditText
+            android:id="@+id/etContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="top"
+            android:hint="Mulai tulis catatanmu di sini..."
+            android:inputType="textMultiLine|textCapSentences"
+            android:lineSpacingExtra="6dp"
+            android:paddingTop="8dp"
+            android:textColor="#5D4037"
+            android:textColorHint="#A1887F"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

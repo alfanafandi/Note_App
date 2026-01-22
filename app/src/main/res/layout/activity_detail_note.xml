@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="?attr/android:windowBackground">
+
+    <!-- ... Kode AppBarLayout tidak berubah ... -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/topAppBarDetail"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back"
+            style="@style/Widget.App.Toolbar" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginBottom="72dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- ... LinearLayout untuk Title dan Search Bar tidak berubah ... -->
+            <LinearLayout
+                android:id="@+id/cardTitle"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorSurface"
+                android:elevation="4dp"
+                android:padding="16dp"
+                android:gravity="center_vertical">
+                <TextView
+                    android:id="@+id/tvDetailTitle"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    tools:text="Judul Catatan"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:textColor="?attr/colorOnSurface" />
+                <ImageButton
+                    android:id="@+id/btnEditTitle"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_menu_edit"
+                    android:background="@android:color/transparent"
+                    app:tint="?attr/colorPrimary"
+                    android:contentDescription="Edit" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/searchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="8dp"
+                android:background="?attr/colorSurface"
+                android:elevation="4dp"
+                android:visibility="gone"
+                android:gravity="center_vertical"
+                tools:visibility="gone">
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="Cari kata..."
+                    android:background="@drawable/search_edittext_bg"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:padding="12dp"/>
+                <ImageButton
+                    android:id="@+id/btnPrev"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_arrow_upward"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Sebelumnya"/>
+                <ImageButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_arrow_downward"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Berikutnya"/>
+            </LinearLayout>
+
+            <!-- 🔥🔥 PERBAIKAN DI SINI 🔥🔥 -->
+            <TextView
+                android:id="@+id/tvDetailContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="240dp"
+                android:text="Isi catatan panjang..."
+                android:textSize="16sp"
+                android:textColor="?attr/colorOnSurface"
+                android:lineSpacingExtra="4dp"
+                android:textIsSelectable="true"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- ... Kode LinearLayout untuk tombol Uji dan semua FAB tidak berubah ... -->
+    <LinearLayout
+        android:id="@+id/llTestButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:padding="8dp"
+        android:background="?attr/colorSurface"
+        android:elevation="8dp">
+        <Button
+            android:id="@+id/btnGoToFlashcard"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Uji Flashcard"
+            android:textColor="?attr/colorOnPrimary"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginEnd="8dp" />
+        <Button
+            android:id="@+id/btnGoToQuiz"
+            style="@style/Widget.Material3.Button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Uji Kuis"
+            android:textColor="?attr/colorOnPrimary"
+            android:backgroundTint="?attr/colorPrimary"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnScrollTop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="88dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_arrow_upward"
+        android:contentDescription="Kembali ke atas"
+        android:tooltipText="Kembali ke atas"
+        app:backgroundTint="#6D4C41"
+        app:tint="@android:color/white"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnExplainAi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="160dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_action_lightbulb"
+        android:contentDescription="Jelaskan dengan Sederhana"
+        android:tooltipText="Jelaskan dengan Sederhana"
+        app:backgroundTint="#6D4C41"
+        app:tint="@android:color/white"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btnSummarizeAi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="232dp"
+        app:fabSize="normal"
+        app:srcCompat="@drawable/ic_action_auto_awesome"
+        android:contentDescription="Ringkas dengan AI"
+        android:tooltipText="Ringkas dengan AI"
+        app:backgroundTint="#6D4C41"
+        app:tint="@android:color/white"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

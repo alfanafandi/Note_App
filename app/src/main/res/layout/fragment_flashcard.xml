@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FAF5EF">
+
+    <!-- 🔥🔥 PERBAIKAN: Bungkus Spinner di dalam FrameLayout 🔥🔥 -->
+    <!-- FrameLayout ini akan membatasi area sentuh Spinner -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <Spinner
+            android:id="@+id/spinnerNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@drawable/spinner_background_themed"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="25sp"/>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btnGenerateAi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buat Flashcard dengan AI"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#6D4C41"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardFlashcard"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        card_view:cardCornerRadius="20dp"
+        card_view:cardElevation="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?android:attr/selectableItemBackground">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/wood_background"
+            android:padding="16dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#AAFFFFFF" />
+
+            <TextView
+                android:id="@+id/tvFlashcardText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Pilih catatan dan klik 'Buat Flashcard dengan AI'"
+                android:textSize="22sp"
+                android:textColor="#3E2723"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:lineSpacingExtra="4dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:id="@+id/tvHintFlip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tap to flip"
+                android:textSize="14sp"
+                android:textColor="#5D4037"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-light"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Kontrol tombol Prev / Next -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="60dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btnPrev"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="◀ Prev"
+            android:backgroundTint="#6D4C41"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Next ▶"
+            android:backgroundTint="#6D4C41"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

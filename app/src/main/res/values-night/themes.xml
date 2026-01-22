@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base dark theme -->
+    <style name="Base.Theme.Note" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Core colors -->
+        <item name="colorPrimary">#A67C52</item>       <!-- kayu cokelat hangat -->
+        <item name="colorOnPrimary">#FFFFFF</item>     <!-- teks di atas primary -->
+        <item name="colorSecondary">#CBB994</item>     <!-- cream lembut -->
+        <item name="colorOnSecondary">#212121</item>   <!-- teks di atas secondary -->
+
+        <!-- Background -->
+        <item name="android:windowBackground">#2E2A25</item> <!-- cokelat gelap nyaman mata -->
+        <item name="colorSurface">#3A362F</item>            <!-- card / sheet gelap -->
+        <item name="colorOnSurface">#EDE1D6</item>          <!-- teks di atas surface -->
+
+        <!-- Error / warning -->
+        <item name="colorError">#D32F2F</item>
+        <item name="colorOnError">#FFFFFF</item>
+
+        <!-- Ripple / overlay -->
+        <item name="colorSurfaceVariant">#4E4437</item>
+        <item name="colorOutline">#6B5E4C</item>
+    </style>
+
+    <!-- Theme to be used -->
+    <style name="Theme.Note" parent="Base.Theme.Note" />
+</resources>

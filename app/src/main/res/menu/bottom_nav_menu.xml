@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/navigation_notes"
+        android:icon="@drawable/ic_notes"
+        android:title="Catatan" />
+
+    <item
+        android:id="@+id/navigation_inspiration"
+        android:icon="@drawable/ic_inspiration"
+        android:title="Inspirasi" />
+
+    <item
+        android:id="@+id/navigation_flashcard"
+        android:icon="@drawable/ic_flashcard"
+        android:title="Flashcard" />
+
+    <item
+        android:id="@+id/navigation_quiz"
+        android:icon="@drawable/ic_quiz_nav"
+        android:title="Kuis"/>
+
+</menu>

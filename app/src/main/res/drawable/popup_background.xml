@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ini adalah bentuk dasar untuk setiap kartu sub-topik -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Memberi warna latar belakang putih solid -->
+    <solid android:color="?attr/colorSurface"/>
+
+    <!-- Membuat sudutnya membulat (rounded corners) -->
+    <corners android:radius="16dp"/>
+
+    <!-- (Opsional) Memberi garis tepi tipis jika diinginkan -->
+    <!-- <stroke android:width="1dp" android:color="#E0E0E0"/> -->
+
+</shape>

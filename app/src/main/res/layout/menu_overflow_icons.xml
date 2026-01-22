@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="200dp"
+    android:orientation="vertical"
+    android:background="@drawable/popup_menu_background"
+    android:elevation="8dp">
+
+    <!-- TOMBOL RINGKAS (Tanpa Ikon Baru) -->
+    <TextView
+        android:id="@+id/btnMenuSummarize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ringkas dengan AI"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/popup_menu_text_color"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="16dp"/>
+
+    <!-- TOMBOL JELASKAN SEDERHANA (Tanpa Ikon Baru) -->
+    <TextView
+        android:id="@+id/btnMenuExplainSimple"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Jelaskan Sederhana"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/popup_menu_text_color"
+        android:background="?attr/selectableItemBackground"
+        android:drawablePadding="16dp"/>
+
+    <!-- GARIS PEMISAH -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?attr/colorSurfaceVariant"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"/>
+
+    <!-- TOMBOL INFO (Menggunakan ikon yang sudah ada) -->
+    <TextView
+        android:id="@+id/btnMenuInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Info Catatan"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/popup_menu_text_color"
+        android:background="?attr/selectableItemBackground"
+        app:drawableStartCompat="@drawable/ic_info"
+        android:drawablePadding="16dp"/>
+
+    <!-- TOMBOL HAPUS (Menggunakan ikon yang sudah ada) -->
+    <TextView
+        android:id="@+id/btnMenuDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hapus Catatan"
+        android:padding="16dp"
+        android:gravity="center_vertical"
+        android:textColor="@color/popup_menu_text_color_danger"
+        android:background="?attr/selectableItemBackground"
+        app:drawableStartCompat="@drawable/ic_menu_delete"
+        app:drawableTint="@color/popup_menu_text_color_danger"
+        android:drawablePadding="16dp"/>
+
+</LinearLayout>

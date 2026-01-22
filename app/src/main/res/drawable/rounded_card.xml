@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- Warna background card -->
+    <solid android:color="#FFFFFF"/>
+
+    <!-- Sudut membulat -->
+    <corners android:radius="12dp"/>
+
+    <!-- Shadow/garis border tipis (opsional) -->
+    <stroke
+        android:width="1dp"
+        android:color="#DDDDDD"/>
+</shape>

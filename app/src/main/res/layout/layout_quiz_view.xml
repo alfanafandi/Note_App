@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?><RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF5EF"
+    tools:context=".QuizFragment">
+
+    <!-- ... (Bagian atas tidak berubah) ... -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvQuestionCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Soal: 1/5"
+                android:textColor="#3E2723"
+                android:textSize="16sp"
+                android:layout_alignParentStart="true"/>
+
+            <TextView
+                android:id="@+id/tvScore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Skor: 0"
+                android:textColor="#3E2723"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Memuat pertanyaan..."
+            android:textSize="20sp"
+            android:textColor="#3E2723"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:minHeight="100dp"/>
+
+        <!-- Grup Pilihan Jawaban -->
+        <RadioGroup
+            android:id="@+id/radioGroupOptions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <!-- 🔥🔥 PERBAIKAN: Hapus android:button="@null" 🔥🔥 -->
+            <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opsi 1"
+                android:background="@drawable/radio_selector"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="@color/radio_text_color"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opsi 2"
+                android:background="@drawable/radio_selector"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="@color/radio_text_color"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opsi 3"
+                android:background="@drawable/radio_selector"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp"
+                android:textColor="@color/radio_text_color"
+                android:textSize="16sp"/>
+
+            <RadioButton
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Opsi 4"
+                android:background="@drawable/radio_selector"
+                android:padding="16dp"
+                android:textColor="@color/radio_text_color"
+                android:textSize="16sp"/>
+        </RadioGroup>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/btnConfirmNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Konfirmasi Jawaban"
+            android:backgroundTint="#6D4C41"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:padding="12dp"/>
+    </LinearLayout>
+</RelativeLayout>

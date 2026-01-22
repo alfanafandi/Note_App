@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/item_mind_map_bg"
+    android:padding="12dp">
+
+    <!-- Header (Judul & Checkbox) -->
+    <RelativeLayout
+        android:id="@+id/headerBranch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:paddingBottom="4dp">
+
+        <CheckBox
+            android:id="@+id/cbBranch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tvBranchTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/cbBranch"
+            android:layout_toStartOf="@+id/ivExpandIcon"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="?attr/colorOnSurface"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="1. Pengenalan Konsep OOP" />
+
+        <ImageView
+            android:id="@+id/ivExpandIcon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_expand_more"
+            app:tint="?attr/colorOnSurfaceVariant"/>
+
+    </RelativeLayout>
+
+    <!-- Konten yang bisa expand/collapse -->
+    <LinearLayout
+        android:id="@+id/contentBranch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="8dp"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <!-- Tombol untuk generate AI (hanya muncul jika konten kosong) -->
+        <Button
+            android:id="@+id/btnExplainWithAi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Jelaskan dengan AI"
+            android:visibility="gone"
+            tools:visibility="visible" />
+
+        <!-- Teks hasil generate AI -->
+        <TextView
+            android:id="@+id/tvGeneratedContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textSize="16sp"
+            android:visibility="gone"
+            tools:text="Ini adalah penjelasan panjang tentang Object-Oriented Programming..."
+            tools:visibility="visible" />
+
+        <!-- Grup Tombol Aksi -->
+        <LinearLayout
+            android:id="@+id/llActionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:visibility="gone"
+            tools:visibility="visible">
+
+            <!-- Tombol Simpan di Note -->
+            <Button
+                android:id="@+id/btnSaveToNote"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Simpan"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp" android:layout_marginEnd="4dp"/>
+
+            <!-- Tombol Uji Flashcard -->
+            <Button
+                android:id="@+id/btnGoToFlashcard"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Flashcard"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp" />
+
+            <!-- Tombol Uji Kuis -->
+            <Button
+                android:id="@+id/btnGoToQuiz"
+                style="?attr/materialButtonOutlinedStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Kuis"
+                android:paddingLeft="12dp"
+                android:paddingRight="12dp"
+                android:layout_marginStart="4dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

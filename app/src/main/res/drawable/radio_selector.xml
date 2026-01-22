@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Saat state checked (dipilih) -->
+    <item android:state_checked="true"
+        android:drawable="@drawable/radio_button_selected"
+        />
+    <!-- State default (tidak dipilih) -->
+    <item android:drawable="@drawable/radio_button_normal" />
+</selector>
+

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="30dp"
+    tools:context=".QuizFragment"
+    android:background="#FAF5EF">
+
+    <!-- Grup untuk Tampilan Setup (Memilih Catatan) -->
+    <LinearLayout
+        android:id="@+id/llSetup"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <Spinner
+            android:id="@+id/spinnerNotes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:textAlignment="center"
+            android:gravity="center_vertical|center_horizontal"
+            android:background="@drawable/spinner_background_themed"
+            android:textColor="?attr/colorOnSecondary"
+            android:textSize="25sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnGenerateAiQuiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Kuis dengan AI"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="#6D4C41"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"/>
+
+        <TextView
+            android:id="@+id/tvQuizPlaceholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pilih catatan dari daftar di atas, lalu klik 'Buat Kuis' untuk memulai latihan."
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#5D4037"
+            android:layout_marginTop="48dp"/>
+
+    </LinearLayout>
+
+    <!-- Container untuk Tampilan Kuis, awalnya disembunyikan -->
+    <FrameLayout
+        android:id="@+id/quizContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:visibility="visible">
+        <!-- Layout activity_quiz.xml akan di-inflate di sini oleh kode Java -->
+    </FrameLayout>
+
+</RelativeLayout>
